@@ -1,3 +1,13 @@
 module.exports = {
-  uri: 'mongodb://localhost:27010/parking'
+  dialect: 'postgres',
+  host: '127.0.0.1',
+  username: 'default',
+  password: 'secret',
+  database: 'parking',
+  operatiorAliases: false,
+  define: {
+    timestamps: true,
+    underscored: true,
+    underscoredAll: true
+  }
 }

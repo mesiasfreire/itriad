@@ -2,8 +2,9 @@ const express = require('express')
 
 const routes = express.Router()
 
-const CarroController = require('./app/controllers/CarroController')
+const VeiculoController = require('./app/controllers/VeiculoController')
 
-routes.post('/carros', CarroController.store)
+routes.post('/veiculos', VeiculoController.store)
+routes.get('/veiculos', VeiculoController.index)
 
 module.exports = routes
