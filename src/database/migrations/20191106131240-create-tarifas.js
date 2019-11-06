@@ -1,36 +1,37 @@
+'use strict'
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('veiculos', {
+    return queryInterface.createTable('tarifas', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      placa: {
+      valor: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.DECIMAL(10, 2)
       },
-      modelo: {
+      hinicio: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.TIME
       },
-      cor: {
+      hfim: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.TIME
       },
-      created_at: {
+      periodoIni: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER
       },
-      updated_at: {
+      peridofim: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER
       }
     })
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('veiculos')
+    return queryInterface.dropTable('tarifas')
   }
 }
