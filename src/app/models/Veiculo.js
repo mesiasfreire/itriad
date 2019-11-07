@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'veiculos'
   })
   Veiculo.associate = function (models) {
-    Veiculo.hasOne(models.Movimentacao, {
+    Veiculo.hasMany(models.Movimentacao, {
       foreignKey: 'veiculo_id',
       as: 'movimentacoes'
     })
