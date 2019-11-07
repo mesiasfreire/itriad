@@ -1,12 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
-  const Tarifa = sequelize.define('Tarifa', {
-    valor: DataTypes.DECIMAL,
-    inicio: DataTypes.TIME,
-    fim: DataTypes.TIME
-  },
-  {
-    freezeTableName: true,
-    tableName: 'tarifas'
-  })
+  const Tarifa = sequelize.define(
+    'Tarifa',
+    {
+      valor: DataTypes.DECIMAL,
+      hinicio: DataTypes.TIME,
+      hfim: DataTypes.TIME,
+      periodoIni: DataTypes.INTEGER,
+      pfinal: DataTypes.INTEGER
+    },
+    {
+      freezeTableName: true,
+      tableName: 'tarifas'
+    }
+  )
   return Tarifa
 }

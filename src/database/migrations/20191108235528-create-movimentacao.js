@@ -7,10 +7,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      placa: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
       entrada: {
         allowNull: false,
         type: Sequelize.TIME
